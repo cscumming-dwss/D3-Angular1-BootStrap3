@@ -10,7 +10,9 @@ angular.module('d3OnAngularSeedApp')
   .directive('simpleLineChart', ['d3Service', function(d3Service) {
     return {
       restrict: 'EA',
-      scope: {},
+      scope: {
+    	  data: '='
+      },
       link: function(scope, element, attrs) {
         d3Service.d3().then(function(d3) {
 
